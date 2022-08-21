@@ -2,12 +2,16 @@ import os
 
 # 1. Criar pastas: imagens, audios e documentos obs: pasta "outros" já existe
 def criar_pastas(diretorio):
-    AUDIOS_DIR = os.path.join(diretorio, 'audios')
-    IMAGENS_DIR = os.path.join(diretorio, 'imagens')
-    DOCS_DIR = os.path.join(diretorio, 'documentos')
-    VIDEOS_DIR = os.path.join(diretorio, 'videos')
-    OUTROS_DIR = os.path.join(diretorio, 'outros')
+    lista = []
+    lista.append(os.path.join(diretorio, 'audios'))
+    lista.append(os.path.join(diretorio, 'imagens'))
+    lista.append(os.path.join(diretorio, 'documentos'))
+    lista.append(os.path.join(diretorio, 'videos'))
+    lista.append(os.path.join(diretorio, 'outros'))
 
+    for pasta in lista:
+        if not os.path.isdir(pasta):
+            os.mkdir(pasta)
 
 # 2. Pegar o nome dos arquivos
 def organizar(diretorio):
@@ -23,6 +27,10 @@ def ext_arquivos(arquivo):
         return arquivo[index:]
     else:
         pass
-# 1. Criar pastas: imagens, audios e documentos obs: pasta "outros" já existe
+
 # 4. Mover determinado arquivo nas pastas, baseado no seu tipo
-organizar('arquivos')
+def mover_arq():
+    pass
+
+# organizar('arquivos')
+criar_pastas('arquivos')
