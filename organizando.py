@@ -7,7 +7,7 @@ dicionario = dict()
 
 # lista de extensões de cada tipo
 audios_ext = ['.mp3', '.wav']
-imagens_ext = ['.img', '.jpg', '.jpeg']
+imagens_ext = ['.img', '.jpg', '.jpeg', '.png']
 documentos_ext = ['.txt', '.doc', '.docx', '.pdf', '.log']
 videos_ext = ['.mp4', '.mov', '.avi']
 
